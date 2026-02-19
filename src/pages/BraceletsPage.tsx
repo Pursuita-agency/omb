@@ -413,6 +413,10 @@ function BraceletSection({
               <span className="text-[#243247] opacity-50">المقاس</span>
               <span className="text-[#243247] opacity-80">{product.specs.sizeAr}</span>
             </div>
+            <div className="flex justify-between text-sm" style={{ fontFamily: "'Amiri', serif" }}>
+              <span className="text-[#243247] opacity-50">السعر</span>
+              <span className="text-[#243247]" style={{ opacity: 0.9, fontWeight: 500 }}>{product.price} جنيه</span>
+            </div>
           </div>
 
           <div className="flex gap-3 flex-wrap">
@@ -441,8 +445,30 @@ function BraceletSection({
       <div className="flex justify-center mt-12">
         <button
           onClick={onOrder}
-          className="px-10 py-3 border border-[#243247] text-[#243247] font-semibold transition-all duration-300 hover:bg-[#243247] hover:text-[#e7ddcc] hover:-translate-y-0.5"
-          style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.1em', fontSize: '0.85rem' }}
+          style={{
+            fontFamily: "'Amiri', serif",
+            letterSpacing: '0.08em',
+            fontSize: '1rem',
+            padding: '14px 48px',
+            background: '#243247',
+            color: '#e7ddcc',
+            border: 'none',
+            borderRadius: '4px',
+            fontWeight: 600,
+            boxShadow: '0 2px 12px rgba(36,50,71,0.15)',
+            transition: 'transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease',
+            cursor: 'pointer',
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-3px)';
+            (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 6px 24px rgba(36,50,71,0.25)';
+            (e.currentTarget as HTMLButtonElement).style.background = '#1a2b3c';
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(0)';
+            (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 2px 12px rgba(36,50,71,0.15)';
+            (e.currentTarget as HTMLButtonElement).style.background = '#243247';
+          }}
         >
           أُطلب الآن
         </button>
@@ -624,22 +650,6 @@ export default function BraceletsPage() {
         </div>
       </section>
 
-      {/* CTA AFTER COLLECTION */}
-      <section className="py-16 bg-[#e7ddcc]">
-        <div className="max-w-xl mx-auto px-6 text-center">
-          <p className="text-[#243247] opacity-60 mb-6 text-lg" style={{ fontFamily: "'Amiri', serif" }}>
-            كل قطعة تُصنع بعناية لتدوم طويلاً
-          </p>
-          <button
-            onClick={() => setOrderModalOpen(true)}
-            className="inline-block px-12 py-4 bg-[#243247] text-[#e7ddcc] font-semibold transition-all duration-300 hover:bg-[#1a2b3c] hover:shadow-xl hover:-translate-y-0.5"
-            style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.1em', fontSize: '0.85rem' }}
-          >
-            أُطلب قطعتك
-          </button>
-        </div>
-      </section>
-
       {/* STORY SECTION */}
       <section className="py-24 md:py-32 bg-white relative overflow-hidden">
         <div
@@ -741,50 +751,6 @@ export default function BraceletsPage() {
               أُطلب الآن
             </button>
           </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section
-        className="py-32 relative overflow-hidden"
-        style={{ background: '#243247' }}
-      >
-        <div className="absolute inset-0 pointer-events-none opacity-5">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                'linear-gradient(45deg, #e7ddcc 25%, transparent 25%), linear-gradient(-45deg, #e7ddcc 25%, transparent 25%)',
-              backgroundSize: '60px 60px',
-            }}
-          />
-        </div>
-        <div className="relative z-10 max-w-2xl mx-auto px-6 text-center">
-          <p
-            className="text-xs tracking-widest uppercase text-[#e7ddcc] mb-6 opacity-50"
-            style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.25em' }}
-          >
-            ORZI 1998
-          </p>
-          <h2
-            className="text-4xl md:text-5xl font-bold text-[#e7ddcc] mb-6"
-            style={{ fontFamily: "'Cinzel', serif" }}
-          >
-            .خالد. راقٍ. أصيل
-          </h2>
-          <p
-            className="text-[#e7ddcc] opacity-55 mb-12 text-lg leading-loose"
-            style={{ fontFamily: "'Amiri', serif" }}
-          >
-            قطعة تُورَّث، لا تُستبدل
-          </p>
-          <button
-            onClick={() => setOrderModalOpen(true)}
-            className="inline-block px-14 py-5 bg-[#e7ddcc] text-[#243247] font-semibold transition-all duration-300 hover:bg-white hover:shadow-2xl hover:-translate-y-0.5"
-            style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.12em', fontSize: '0.875rem' }}
-          >
-            أُطلب قطعتك الآن
-          </button>
         </div>
       </section>
 
