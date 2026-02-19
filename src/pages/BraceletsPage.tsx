@@ -767,7 +767,7 @@ export default function BraceletsPage() {
             <button
               onClick={() => setOrderModalOpen(true)}
               className="px-10 py-3 bg-[#e7ddcc] text-[#243247] font-semibold transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-lg"
-              style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.1em', fontSize: '0.85rem' }}
+              style={{ fontFamily: "'amiri', serif", letterSpacing: '0.1em', fontSize: '0.85rem' }}
             >
               أُطلب الآن
             </button>
