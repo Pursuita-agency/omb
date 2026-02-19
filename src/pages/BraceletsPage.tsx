@@ -570,7 +570,7 @@ export default function BraceletsPage() {
               <button
                 onClick={() => setOrderModalOpen(true)}
                 className="px-10 py-4 bg-[#243247] text-[#e7ddcc] font-semibold transition-all duration-300 hover:bg-[#1a2b3c] hover:shadow-xl hover:-translate-y-0.5"
-                style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.1em', fontSize: '0.85rem' }}
+                style={{ fontFamily: "'amiri', serif", letterSpacing: '0.1em', fontSize: '0.85rem' }}
               >
                 أُطلب قطعتك
               </button>
