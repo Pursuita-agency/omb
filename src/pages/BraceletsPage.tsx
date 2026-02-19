@@ -177,7 +177,7 @@ function OrderModal({
             </button>
             <h2
               className="text-3xl md:text-4xl font-bold text-[#e7ddcc] mb-8 text-center"
-              style={{ fontFamily: "'Cinzel', serif" }}
+              style={{ fontFamily: "'amiri', serif" }}
             >
               تقديم طلب
             </h2>
