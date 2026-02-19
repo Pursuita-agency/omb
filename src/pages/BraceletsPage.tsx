@@ -701,7 +701,7 @@ export default function BraceletsPage() {
             </p>
             <h2
               className="text-3xl md:text-4xl font-bold text-[#243247]"
-              style={{ fontFamily: "'Cinzel', serif" }}
+              style={{ fontFamily: "'amiri', serif" }}
             >
               ما يجعل ORZI مختلفة
             </h2>
