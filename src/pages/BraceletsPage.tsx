@@ -546,7 +546,7 @@ export default function BraceletsPage() {
             <div>
               <p
                 className="text-xs tracking-widest uppercase text-[#243247] mb-4 opacity-60"
-                style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.25em' }}
+                style={{ fontFamily: "'amiri', serif", letterSpacing: '0.25em' }}
               >
                 التشكيلة الأساسية
               </p>
